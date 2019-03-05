@@ -101,39 +101,22 @@ public class LatinSquare {
 	{
 		boolean isLatinSquare= false;
 		for (int i =0; i<this.LatinSquare.length;i++) {
-			for (int t=0; t<this.LatinSquare.length;t++) {
-				if(hasDuplicates(getRow(this.LatinSquare[i][t]))==false&&hasDuplicates(getColumn(this.LatinSquare[i][t]))==false) 
-				{
+			if(hasDuplicates(getRow(i))) {
+				return false;
+				}else {
 					isLatinSquare = true;
-				}
-				else {
-					isLatinSquare = false;
-					break;
-				}
+					
+					
 			}
 		}
 		for (int j=0 ;j<this.LatinSquare.length-1;j++) {
-			for(int a=0;a<this.LatinSquare.length-1;a++) {
-				if(getRow(this.LatinSquare[j][a])==getRow(this.LatinSquare[j+1][a])){
-					isLatinSquare = true;
-					}
-				else {
-					isLatinSquare = false;
-					break;
-				}
-			}
-		}
-		for (int k=0;k<this.LatinSquare.length-1;k++) {
-			for(int z=0;z<this.LatinSquare.length-1;z++) {
-				if(getColumn(this.LatinSquare[k][z])==getColumn(this.LatinSquare[k][z+1])){
+			if(hasDuplicates(getColumn(j))) {
+				return false;
+				}else {
 					isLatinSquare = true;
 				}
-				else {
-					isLatinSquare = false;
-					break;
-				}
 			}
-		}
+		
 		return isLatinSquare;
 	}
 }

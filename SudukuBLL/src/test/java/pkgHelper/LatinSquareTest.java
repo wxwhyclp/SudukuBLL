@@ -113,8 +113,8 @@ public class LatinSquareTest {
 		LatinSquare lq = new LatinSquare();
 		int[][] latinSquare= {{1,2,3},{2,3,1},{3,1,2}};
 		lq.setLatinSquare(latinSquare);
-		int[] compare = {2,3,1};
-		assertFalse(Arrays.equals(lq.getColumn(iRow), compare));
+		int[] compare = {1,2,3};
+		assertTrue(Arrays.equals(lq.getColumn(iRow), compare));
 	}
 	@Test
 	public void isLatinSquare_test1() {
