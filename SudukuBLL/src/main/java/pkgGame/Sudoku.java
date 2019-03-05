@@ -1,5 +1,5 @@
 package pkgGame;
-import java.util.Arrarys;
+import java.util.Arrays;
 
 public class Sudoku {
 	
